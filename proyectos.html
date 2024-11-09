@@ -4,11 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="tarea.css">
+    <title>Proyectos - PLANIFY</title>
+    <link rel="stylesheet" href="proyectos.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="shortcut icon" href="Logos/roco.png" type="image/x-icon">
-</head>
+<link rel="shortcut icon" href="Logos/roco.png" type="image/x-icon"></head>
 
 <body>
     <div class="min-h-full">
@@ -26,9 +25,9 @@
                             <div class="ml-10 flex items-baseline space-x-4">
                                 <a href="index.html"
                                     class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white">Inicio</a>
-                                <a href="#"
+                                <a href="proyectos.html"
                                     class="rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-gray-700 hover:text-white">Proyectos</a>
-                                <a href="tarea.html"
+                                <a href=""
                                     class="rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-gray-700 hover:text-white">Tareas</a>
                                 <a href="calendario.html"
                                     class="rounded-md px-3 py-2 text-sm font-medium text-black-300 hover:bg-gray-700 hover:text-white">Calendario</a>
@@ -248,85 +247,85 @@
                     background: linear-gradient(90deg, #fffb03, #95f003);
                 }
             </style>
-            <div class="container">
-                <h1>Proyecto A</h1>
-                <div class="project-description" id="projectDescription">
-                    Aquí va la descripción del proyecto.
-                </div>
-                <div id="assignmentsSection">
-                    <strong>Asignaciones:</strong>
-                    <ul id="taskList">
-                        <!-- Aquí se agregarán las tareas asignadas -->
-                    </ul>
-                </div>
-                <div class="buttons">
-                    <button id="asignar-btn" onclick="abrirModal('asignarModal')">Asignar Tarea</button>
-                    <button id="completado-btn" onclick="abrirModal('completadoModal')">Completado</button>
-                    <button id="borrar-btn" onclick="abrirModal('borrarModal')">Borrar</button>
-                    <button id="editar-btn" onclick="abrirModal('editarModal')">Editar</button>
+           <div class="container">
+            <h1>Proyecto A</h1>
+            <div class="project-description" id="projectDescription">
+                Aquí va la descripción del proyecto.
+            </div>
+            <div id="assignmentsSection">
+                <strong>Asignaciones:</strong>
+                <ul id="taskList">
+                    <!-- Aquí se agregarán las tareas asignadas -->
+                </ul>
+            </div>
+            <div class="buttons">
+                <button id="asignar-btn" onclick="abrirModal('asignarModal')">Asignar Tarea</button>
+                <button id="completado-btn" onclick="abrirModal('completadoModal')">Completado</button>
+                <button id="borrar-btn" onclick="abrirModal('borrarModal')">Borrar</button>
+                <button id="editar-btn" onclick="abrirModal('editarModal')">Editar</button>
+            </div>
+        </div>
+        
+        <!-- Modales -->
+        <div id="asignarModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">Asignar Tarea</div>
+                <label>Nombre de la tarea:</label>
+                <input type="text" id="nombreTarea">
+                
+                <label>Asignado a:</label>
+                <input type="text" id="asignarA">
+                
+                <label>Fecha límite:</label>
+                <input type="date" id="fechaLimite">
+                
+                <label>Estado:</label>
+                <select id="estadoTarea">
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En progreso">En progreso</option>
+                    <option value="Completado">Completado</option>
+                </select>
+                
+                <div class="modal-buttons">
+                    <button onclick="agregarTarea()">Confirmar</button>
+                    <button onclick="cerrarModal('asignarModal')">Cancelar</button>
                 </div>
             </div>
-
-            <!-- Modales -->
-            <div id="asignarModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">Asignar Tarea</div>
-                    <label>Nombre de la tarea:</label>
-                    <input type="text" id="nombreTarea">
-
-                    <label>Asignado a:</label>
-                    <input type="text" id="asignarA">
-
-                    <label>Fecha límite:</label>
-                    <input type="date" id="fechaLimite">
-
-                    <label>Estado:</label>
-                    <select id="estadoTarea">
-                        <option value="Pendiente">Pendiente</option>
-                        <option value="En progreso">En progreso</option>
-                        <option value="Completado">Completado</option>
-                    </select>
-
-                    <div class="modal-buttons">
-                        <button onclick="agregarTarea()">Confirmar</button>
-                        <button onclick="cerrarModal('asignarModal')">Cancelar</button>
-                    </div>
+        </div>
+        
+        
+        <div id="completadoModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">Marcar como Completado</div>
+                <p>¿Estás seguro de marcar el proyecto como completado?</p>
+                <div class="modal-buttons">
+                    <button onclick="marcarCompletado()">Sí</button>
+                    <button onclick="cerrarModal('completadoModal')">No</button>
                 </div>
             </div>
-
-
-            <div id="completadoModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">Marcar como Completado</div>
-                    <p>¿Estás seguro de marcar el proyecto como completado?</p>
-                    <div class="modal-buttons">
-                        <button onclick="marcarCompletado()">Sí</button>
-                        <button onclick="cerrarModal('completadoModal')">No</button>
-                    </div>
+        </div>
+        
+        <div id="borrarModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">Eliminar Proyecto</div>
+                <p>¿Estás seguro de eliminar el proyecto?</p>
+                <div class="modal-buttons">
+                    <button onclick="borrarProyecto()">Sí</button>
+                    <button onclick="cerrarModal('borrarModal')">No</button>
                 </div>
             </div>
-
-            <div id="borrarModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">Eliminar Proyecto</div>
-                    <p>¿Estás seguro de eliminar el proyecto?</p>
-                    <div class="modal-buttons">
-                        <button onclick="borrarProyecto()">Sí</button>
-                        <button onclick="cerrarModal('borrarModal')">No</button>
-                    </div>
+        </div>
+        
+        <div id="editarModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">Editar Descripción</div>
+                <textarea id="descripcionProyecto" rows="3" style="width: 100%;"></textarea>
+                <div class="modal-buttons">
+                    <button onclick="editarDescripcion()">Guardar</button>
+                    <button onclick="cerrarModal('editarModal')">Cancelar</button>
                 </div>
             </div>
-
-            <div id="editarModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-header">Editar Descripción</div>
-                    <textarea id="descripcionProyecto" rows="3" style="width: 100%;"></textarea>
-                    <div class="modal-buttons">
-                        <button onclick="editarDescripcion()">Guardar</button>
-                        <button onclick="cerrarModal('editarModal')">Cancelar</button>
-                    </div>
-                </div>
-            </div>
+        </div>
         </section><br>
         <section style="align-items: center;">
             <style>
@@ -704,7 +703,7 @@
                 </div>
             </div>
         </section><br>
-        <script src="tarea.js"></script>
+        <script src="proyecto.js"></script>
     </div>
 </body>
 
