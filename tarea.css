@@ -33,6 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 header {
@@ -148,6 +149,7 @@ table td button:hover {
     background-color: #15ce1f;
 }
 
+
 /* BOTÓN PRINCIPAL */
 .add-btn {
     margin-top: 1em;
@@ -173,36 +175,3 @@ footer {
     font-size: var(--font-size-base);
 }
 
-.color{
-    background: -webkit-gradient(linear, left top, right top, from(#fffb03), to(#80c70d));
-}
-
-/* De aquí hacia abajo son los estilos del calendario */
-
-button {
-    background-color: #22c55e; /* Verde sólido */
-    color: white;
-    padding: 0.75rem 1.25rem; /* Tamaño constante */
-    border-radius: 0.75rem; /* Bordes redondeados más pronunciados */
-    text-align: center;
-    display: inline-block;
-    width: auto; /* El tamaño se ajusta al contenido */
-    max-width: 300px; /* Limitar el tamaño máximo */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Solo transición de color y sombra */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra general */
-}
-
-button:hover {
-    background-color: #16a34a; /* Verde más oscuro al pasar el ratón */
-    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra interna */
-}
-
-button a {
-    color: white; /* Asegura que el enlace tenga el mismo color que el texto del botón */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-}
-
-button:focus {
-    outline: 2px solid #22c55e;
-    outline-offset: 2px;
-}
