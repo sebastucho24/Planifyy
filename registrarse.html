@@ -19,7 +19,7 @@
                 <label for="" class="block mt-3 text-sm text-black-700 text-center font-semibold">
                     <b>Registrate</b>
                 </label>
-                <form method="#" action="#" class="mt-10">
+                <form id="form-register" method="#" action="#" class="mt-10">
                                     
                     <div>
                         <input type="text" placeholder="Nombre" class="mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0 text-center">
@@ -38,7 +38,7 @@
                     </div>
         
                     <div class="mt-7">
-                        <button class="bg-gradient-to-r from-green-500 to-yellow-300 w-full py-3 rounded-xl text-black-100 shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
+                        <button onclick="registrarUsuario()" class="bg-gradient-to-r from-green-500 to-yellow-300 w-full py-3 rounded-xl text-black-100 shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105">
                             <a href="/iniciarsesion.html">Registrar</a>
                         </button>
                     </div>
@@ -58,5 +58,6 @@
 </div>
 
 <script src="script.js"></script>
+<script src="usuarios.js"></script>
 </body>
 </html>
