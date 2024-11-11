@@ -1,6 +1,6 @@
 let usuarios = [
   {
-    nombre: "juan sebastian correa",
+    nombre: "juan sebastian",
     contrasena: "1234567",
     profesion: "estudiante",
     usuario: "Estudiante",
